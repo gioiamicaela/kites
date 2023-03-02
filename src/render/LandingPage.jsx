@@ -1,28 +1,21 @@
 import React from "react";
+import NavBar from "../components/NavBar";
+import MenuBar from "../components/MenuBar";
 
 function LandingPage() {
   return (
-    <div>
-      <div
-        style={{
-          float: "left",
-          width: "17%",
-          height: "100vh",
-          color: "#FFFFFF",
-          border: "1px solid #F3F3F3",
-        }}
-      >
-        SideBar
-      </div>
-      <div
-        style={{
-          float: "Right",
-          backgroundColor: "#F3F3F3",
-          width: "83%",
-          height: "100vh",
-        }}
-      >
-        SideBar
+    <div className="container-fluid">
+      <NavBar />
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <MenuBar
+          style={{
+            float: "left",
+            color: "#FFFFFF",
+            border: "1px solid #F3F3F3",
+          }}
+        ></MenuBar>
+
+        <div>Content</div>
       </div>
     </div>
   );
