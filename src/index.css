@@ -32,3 +32,21 @@ a {
   font-size: 18px;
   line-height: 27px;
 }
+
+table {
+  background-color: #e5e5e5;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #e5e5e5;
+}
+
+.ant-table table {
+  border-spacing: 0 10px;
+}
+
+.ant-table-tbody .ant-table-row {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: #ffffff;
+}

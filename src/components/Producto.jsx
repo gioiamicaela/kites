@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import ProductTable from "./ProductTable";
 
 function Producto() {
   const handleButtonClick = (e) => {
@@ -36,7 +37,7 @@ function Producto() {
   };
 
   return (
-    <div className="container">
+    <div className="px-5 pt-2 w-100" style={{ backgroundColor: "#E5E5E5" }}>
       <div className="row">
         <div className="col-12 d-flex align-items-center">
           <h3 className="title mt-2">Productos</h3>
@@ -83,42 +84,63 @@ function Producto() {
         </div>
       </div>
       <div className="row">
-        <div className="col-12 d-flex align-items-center">
-          <h4
-            style={{
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "14px",
-              lineHeight: "21px",
-              color: "black",
-              margin: "0px",
-            }}
-          >
-            Show
-          </h4>
-          <Dropdown menu={menuProps} className="mx-1">
-            <Button>
-              <Space>
-                10
-                <DownOutlined />
-              </Space>
-            </Button>
-          </Dropdown>
-          <h4
-            style={{
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: "500",
-              fontSize: "14px",
-              lineHeight: "21px",
-              color: "black",
-              margin: "0px",
-            }}
-          >
-            entries
-          </h4>
+        <div className="col-12  mt-2 d-flex justify-content-between">
+          <div className="d-flex align-items-center">
+            <h4
+              style={{
+                fontFamily: "Poppins",
+                fontStyle: "normal",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "21px",
+                color: "black",
+                margin: "0px",
+              }}
+            >
+              Show
+            </h4>
+            <Dropdown menu={menuProps} className="mx-1">
+              <Button>
+                <Space>
+                  10
+                  <DownOutlined />
+                </Space>
+              </Button>
+            </Dropdown>
+            <h4
+              style={{
+                fontFamily: "Poppins",
+                fontStyle: "normal",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "21px",
+                color: "black",
+                margin: "0px",
+              }}
+            >
+              entries
+            </h4>
+          </div>
+          <div className="d-flex align-items-center">
+            <h4
+              style={{
+                fontFamily: "Poppins",
+                fontStyle: "normal",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "21px",
+                color: "black",
+                margin: "0px",
+              }}
+            >
+              Search:
+            </h4>
+            <input className="mx-2" />
+          </div>
         </div>
+      </div>
+      <div className="row mt-4">
+        <ProductTable />
       </div>
     </div>
   );

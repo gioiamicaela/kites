@@ -7,7 +7,7 @@ import Ficha from "../components/Ficha";
 import Documento from "../components/Documento";
 
 function LandingPage() {
-  const [content, setContent] = useState("producto");
+  const [content, setContent] = useState("productos");
   const contentDisplay = (key) => {
     setContent(key.key);
   };
