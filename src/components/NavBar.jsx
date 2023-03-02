@@ -11,9 +11,8 @@ function NavBar() {
       expand="lg"
       style={{
         height: "62px",
-        width: "100vw",
         backgroundColor: "#FFFFFF",
-        border: "1px solid #F3F3F3",
+        borderBottom: "1px solid #F3F3F3",
       }}
     >
       <Container fluid>

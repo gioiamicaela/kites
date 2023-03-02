@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import MenuBar from "../components/MenuBar";
+import Producto from "../components/Producto";
+import Web from "../components/Web";
+import Ficha from "../components/Ficha";
+import Documento from "../components/Documento";
 
 function LandingPage() {
+  const [content, setContent] = useState("producto");
+  const contentDisplay = (key) => {
+    setContent(key.key);
+  };
+
   return (
-    <div className="container-fluid">
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        flex: "1",
+      }}
+    >
       <NavBar />
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div style={{ display: "flex", flexDirection: "row", flex: "2" }}>
         <MenuBar
           style={{
             float: "left",
             color: "#FFFFFF",
-            border: "1px solid #F3F3F3",
+            borderRight: "1px solid #F3F3F3",
           }}
+          contentDisplay={contentDisplay}
         ></MenuBar>
-
-        <div>Content</div>
+        {content === "productos" && <Producto />}
+        {content === "webs" && <Web />}
+        {content === "documentos" && <Documento />}
+        {content === "fichas" && <Ficha />}
       </div>
     </div>
   );
