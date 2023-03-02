@@ -37,7 +37,7 @@ function Producto() {
   };
 
   return (
-    <div className="px-5 pt-2 w-100" style={{ backgroundColor: "#E5E5E5" }}>
+    <div className="px-5 pt-2 w-100" style={{ backgroundColor: "#F3F3F3" }}>
       <div className="row">
         <div className="col-12 d-flex align-items-center">
           <h3 className="title mt-2">Productos</h3>
@@ -55,7 +55,7 @@ function Producto() {
           >
             <h4
               style={{
-                fontFamily: "Poppins",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "normal",
                 fontWeight: "500",
                 fontSize: "14px",
@@ -68,7 +68,7 @@ function Producto() {
             </h4>
             <h4
               style={{
-                fontFamily: "Poppins",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "normal",
                 fontWeight: "500",
                 fontSize: "14px",
@@ -88,9 +88,9 @@ function Producto() {
           <div className="d-flex align-items-center">
             <h4
               style={{
-                fontFamily: "Poppins",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "normal",
-                fontWeight: "500",
+                fontWeight: "700",
                 fontSize: "14px",
                 lineHeight: "21px",
                 color: "black",
@@ -109,9 +109,9 @@ function Producto() {
             </Dropdown>
             <h4
               style={{
-                fontFamily: "Poppins",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "normal",
-                fontWeight: "500",
+                fontWeight: "700",
                 fontSize: "14px",
                 lineHeight: "21px",
                 color: "black",
@@ -124,9 +124,9 @@ function Producto() {
           <div className="d-flex align-items-center">
             <h4
               style={{
-                fontFamily: "Poppins",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "normal",
-                fontWeight: "500",
+                fontWeight: "700",
                 fontSize: "14px",
                 lineHeight: "21px",
                 color: "black",
@@ -135,7 +135,14 @@ function Producto() {
             >
               Search:
             </h4>
-            <input className="mx-2" />
+            <input
+              className="mx-2"
+              style={{
+                backgroundColor: " #F3F3F3",
+                border: "1px solid #a3a2a2",
+                borderRadius: "7%",
+              }}
+            />
           </div>
         </div>
       </div>

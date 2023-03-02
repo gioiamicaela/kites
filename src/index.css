@@ -6,6 +6,7 @@ body,
 html {
   margin: 0;
   height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 
 .App {
@@ -17,16 +18,16 @@ a {
 }
 
 .title {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   color: #000000;
 }
 
 .sideMenuTitle {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -37,16 +38,47 @@ table {
   background-color: #e5e5e5;
 }
 
-.ant-table-thead > tr > th {
-  background-color: #e5e5e5;
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  table
+  thead.ant-table-thead
+  .ant-table-cell {
+  background-color: #f3f3f3;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px solid black;
 }
 
-.ant-table table {
-  border-spacing: 0 10px;
-}
-
-.ant-table-tbody .ant-table-row {
+.ant-table
+  .ant-table-container
+  .ant-table-content
+  table
+  tbody.ant-table-tbody
+  .ant-table-row {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   background: #ffffff;
+}
+
+/* .ant-table
+  .ant-table-container
+  .ant-table-content
+  table
+  tbody.ant-table-tbody
+  tr.ant-table-row.ant-table-row-level-0
+  td.ant-table-cell {
+  border-spacing: 0 10px;
+} */
+
+.ant-table table .ant-table-tbody {
+  border-spacing: 0 10px;
+}
+
+.ant-dropdown-trigger {
+  background-color: #f3f3f3;
+  border: 1px solid #a3a2a2;
 }

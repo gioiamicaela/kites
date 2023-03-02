@@ -28,7 +28,7 @@ function NavBar() {
         >
           <h2
             style={{
-              fontFamily: "Poppins",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: "500",
               fontSize: "18px",
               lineHeight: "27px",
