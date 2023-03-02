@@ -1,6 +1,8 @@
 import React from "react";
 import { Space, Table, Tag } from "antd";
 import Icon, { DownOutlined } from "@ant-design/icons";
+import ingles from "./ingles.png";
+import español from "./españa.png";
 
 function ProductTable() {
   const columns = [
@@ -76,35 +78,56 @@ function ProductTable() {
         </>
       ),
     },
+    {
+      title: "Idiomas",
+      key: "idiomas",
+      dataIndex: "idiomas",
+      render: (_, { idiomas }) => (
+        <>
+          {idiomas.map((idioma) => {
+            let url;
+            if (idioma === "español") {
+              url = español;
+            } else {
+              url = ingles;
+            }
+            return <img src={url} />;
+          })}
+        </>
+      ),
+    },
   ];
   const data = [
     {
       key: "1",
-      ccodigo: 100020,
+      codigo: 100020,
       nombre: "TEXTURGLAS A",
       categoria: "TEJIDOS TÉCNICOS DE FIBRA DE VIDRIO/ TEXTURGLAS",
       tags: ["Ficha completa", "Landing comercial"],
       fichas: ["Ficha técnica", "Ficha seguridad"],
+      idiomas: ["español", "ingles"],
     },
     {
       key: "2",
-      ccodigo: 500913,
+      codigo: 500913,
       nombre: "PHANTASY PLUS 913",
       categoria: "TEJIDOS TÉCNICOS DE FIBRA DE VIDRIO/ PHANTASY PLUS",
       tags: ["Ficha completa"],
       fichas: ["Ficha técnica", "Ficha seguridad"],
+      idiomas: ["español", "ingles"],
     },
     {
       key: "3",
-      ccodigo: 600000,
+      codigo: 600000,
       nombre: "CINTA TAPAGRIETAS TAPE-TEX 5x20",
       categoria: "CINTAS/CINTAS AUTOADHESIVAS",
       tags: ["Ficha completa", "Landing comercial"],
       fichas: ["Ficha técnica"],
+      idiomas: ["español", "ingles"],
     },
     {
       key: "4",
-      ccodigo: "BB050RDEN",
+      codigo: "BB050RDEN",
       nombre: "PINTURA PIZARRA ROJO 05 L",
       categoria: "SOLUCIONES DE ESCRITURA Y MAGNÉTICAS/PINTURA DE PIZARRA",
       tags: [
@@ -115,6 +138,7 @@ function ProductTable() {
         "Otra",
       ],
       fichas: ["Ficha técnica", "Ficha seguridad"],
+      idiomas: ["español", "ingles"],
     },
   ];
   return <Table columns={columns} dataSource={data} />;

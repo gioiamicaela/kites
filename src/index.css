@@ -82,3 +82,7 @@ table {
   background-color: #f3f3f3;
   border: 1px solid #a3a2a2;
 }
+
+.ant-pagination.ant-table-pagination {
+  display: none;
+}

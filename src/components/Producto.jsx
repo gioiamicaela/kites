@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import ProductTable from "./ProductTable";
+import { Link } from "react-router-dom";
 
 function Producto() {
   const handleButtonClick = (e) => {
@@ -41,46 +42,49 @@ function Producto() {
       <div className="row">
         <div className="col-12 d-flex align-items-center">
           <h3 className="title mt-2">Productos</h3>
-          <button
-            className="mx-2"
-            style={{
-              backgroundColor: "#000000",
-              borderRadius: "5px",
-              width: "168.21px",
-              height: "30px",
-              display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
-            }}
-          >
-            <h4
+          <Link to="/new">
+            {" "}
+            <button
+              className="mx-2"
               style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontStyle: "normal",
-                fontWeight: "500",
-                fontSize: "14px",
-                lineHeight: "21px",
-                color: "#FFFFFF",
-                margin: "0px",
+                backgroundColor: "#000000",
+                borderRadius: "5px",
+                width: "168.21px",
+                height: "30px",
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
               }}
             >
-              +
-            </h4>
-            <h4
-              style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontStyle: "normal",
-                fontWeight: "500",
-                fontSize: "14px",
-                lineHeight: "21px",
-                color: "#FFFFFF",
-                margin: "0px",
-              }}
-            >
-              {" "}
-              Añadir producto
-            </h4>
-          </button>
+              <h4
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  lineHeight: "21px",
+                  color: "#FFFFFF",
+                  margin: "0px",
+                }}
+              >
+                +
+              </h4>
+              <h4
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  lineHeight: "21px",
+                  color: "#FFFFFF",
+                  margin: "0px",
+                }}
+              >
+                {" "}
+                Añadir producto
+              </h4>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="row">
