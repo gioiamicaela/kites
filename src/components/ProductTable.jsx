@@ -4,14 +4,31 @@ import Icon, { DownOutlined } from "@ant-design/icons";
 import ingles from "./ingles.png";
 import español from "./españa.png";
 import { Link } from "react-router-dom";
+import avatar from "./avatar.png";
+import avatar6 from "./avatar600000.png";
+import avatarBD from "./avatarBD.png";
 
 function ProductTable() {
   const columns = [
     {
-      title: "Código",
+      title: "",
+      dataIndex: "avatar",
+      key: "avatar",
+      render: (text, record) => (
+        <Link className="tableLink" to={`/${record.codigo}`}>
+          <img src={record.img} alt="" />
+        </Link>
+      ),
+    },
+    {
+      title: (
+        <>
+          Código
+          <DownOutlined style={{ color: "black", marginLeft: "2px" }} />
+        </>
+      ),
       dataIndex: "codigo",
       key: "codigo",
-      icon: <DownOutlined />,
       render: (text, record) => (
         <Link className="tableLink" to={`/${record.codigo}`}>
           {text}
@@ -30,24 +47,24 @@ function ProductTable() {
     },
     {
       title: "Webs",
-      key: "tags",
-      dataIndex: "tags",
-      render: (_, { tags }) => (
+      key: "webs",
+      dataIndex: "webs",
+      render: (_, { webs }) => (
         <>
-          {tags.map((tag) => {
+          {webs.map((web) => {
             let color;
-            if (tag === "Landing comercial" || tag === "Loading 2") {
+            if (web === "Landing comercial" || web === "Loading 2") {
               color = "#2980B9";
-            } else if (tag === "Ficha completa" || tag === "Ficha decoración") {
+            } else if (web === "Ficha completa" || web === "Ficha decoración") {
               color = "#5499C7";
-            } else if (tag === "Ficha técnica") {
+            } else if (web === "Ficha técnica") {
               color = "#45B39D";
-            } else if (tag === "Ficha seguridad") {
+            } else if (web === "Ficha seguridad") {
               color = "#16A085";
             }
             return (
-              <Tag color={color} key={tag}>
-                {tag}
+              <Tag color={color} key={web}>
+                {web}
               </Tag>
             );
           })}
@@ -108,34 +125,37 @@ function ProductTable() {
       codigo: 100020,
       nombre: "TEXTURGLAS A",
       categoria: "TEJIDOS TÉCNICOS DE FIBRA DE VIDRIO/ TEXTURGLAS",
-      tags: ["Ficha completa", "Landing comercial"],
+      webs: ["Ficha completa", "Landing comercial"],
       fichas: ["Ficha técnica", "Ficha seguridad"],
       idiomas: ["español", "ingles"],
+      img: avatar,
     },
     {
       key: "2",
       codigo: 500913,
       nombre: "PHANTASY PLUS 913",
       categoria: "TEJIDOS TÉCNICOS DE FIBRA DE VIDRIO/ PHANTASY PLUS",
-      tags: ["Ficha completa"],
+      webs: ["Ficha completa"],
       fichas: ["Ficha técnica", "Ficha seguridad"],
       idiomas: ["español", "ingles"],
+      img: avatar,
     },
     {
       key: "3",
       codigo: 600000,
       nombre: "CINTA TAPAGRIETAS TAPE-TEX 5x20",
       categoria: "CINTAS/CINTAS AUTOADHESIVAS",
-      tags: ["Ficha completa", "Landing comercial"],
+      webs: ["Ficha completa", "Landing comercial"],
       fichas: ["Ficha técnica"],
       idiomas: ["español", "ingles"],
+      img: avatar6,
     },
     {
       key: "4",
       codigo: "BB050RDEN",
       nombre: "PINTURA PIZARRA ROJO 05 L",
       categoria: "SOLUCIONES DE ESCRITURA Y MAGNÉTICAS/PINTURA DE PIZARRA",
-      tags: [
+      webs: [
         "Ficha completa",
         "Landing comercial",
         "Loading 2",
@@ -144,6 +164,7 @@ function ProductTable() {
       ],
       fichas: ["Ficha técnica", "Ficha seguridad"],
       idiomas: ["español", "ingles"],
+      img: avatarBD,
     },
   ];
   return <Table columns={columns} dataSource={data} />;

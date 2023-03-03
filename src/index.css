@@ -49,7 +49,7 @@ a {
 }
 
 table {
-  background-color: #e5e5e5;
+  background-color: rgb(243, 243, 243);
 }
 
 .ant-table
@@ -73,24 +73,51 @@ table {
   table
   tbody.ant-table-tbody
   .ant-table-row {
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
   background: #ffffff;
 }
 
-/* .ant-table
+.ant-table table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: -10px; /* correct offset on first border spacing if desired */
+}
+td {
+  border-style: solid none;
+  padding: 10px;
+}
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.ant-table
   .ant-table-container
   .ant-table-content
   table
   tbody.ant-table-tbody
-  tr.ant-table-row.ant-table-row-level-0
-  td.ant-table-cell {
-  border-spacing: 0 10px;
-} */
+  tr {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+}
 
-.ant-table table .ant-table-tbody {
+/* .ant-table table {
   border-spacing: 0 10px;
 }
+
+.ant-table table thead {
+  border-spacing: 0 0px;
+} */
+
+/* .ant-table table thead tr {
+  border-spacing: 0 0px;
+  border-collapse: separate;
+  margin: -10px 0;
+  box-shadow: none;
+} */
 
 .ant-dropdown-trigger {
   background-color: #f3f3f3;
@@ -146,8 +173,7 @@ table {
 .tableLink {
   color: black;
 }
-
-.detailsTitle {
+Fichas .detailsTitle {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
