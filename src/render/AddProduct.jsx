@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import vector from "./Vector.png";
+import FormPrduct from "../components/FormProduct";
 
 function AddProduct() {
   return (
-    <div className="container">
+    <div className="container-fluid mx-5">
       <div className="row mt-5">
         <div className="col-2 d-flex jutify-content-end">
           <Link to="/" style={{ marginRight: "78px" }}>
@@ -14,7 +15,10 @@ function AddProduct() {
               style={{ width: "40px", height: "40px" }}
             />
           </Link>
-          <div className="col-10" style={{ width: "80vw" }}>
+          <div
+            className="col-10 d-flex flex-column align-items-start "
+            style={{ width: "80vw" }}
+          >
             <h4
               style={{
                 fontFamily: "Poppins",
@@ -26,6 +30,7 @@ function AddProduct() {
             >
               Nuevo Producto
             </h4>
+            <FormPrduct />
           </div>
         </div>
       </div>

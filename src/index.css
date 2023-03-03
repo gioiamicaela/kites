@@ -86,3 +86,54 @@ table {
 .ant-pagination.ant-table-pagination {
   display: none;
 }
+
+.formLabels {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+}
+
+.css-dev-only-do-not-override-10ed4xt.ant-form-item .ant-form-item-label {
+  text-align: start;
+}
+
+.formInput {
+  border: 1px solid #676767;
+  border-radius: 6px;
+  width: 271px;
+  height: 34px;
+}
+
+.formButton {
+  width: 168.21px;
+  height: 30px;
+  background: #000000;
+  border-radius: 5px;
+}
+
+.formButton span {
+  width: 137.54px;
+  height: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.idiomaButton span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.ant-btn-dashed {
+  border: transparent;
+}
