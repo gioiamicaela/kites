@@ -144,7 +144,9 @@ function Producto() {
               style={{
                 backgroundColor: " #F3F3F3",
                 border: "1px solid #a3a2a2",
-                borderRadius: "7%",
+                border: "1px solid #676767",
+                borderRadius: "6px",
+                height: "34px",
               }}
             />
           </div>

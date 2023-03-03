@@ -34,6 +34,20 @@ a {
   line-height: 27px;
 }
 
+.ant-space-item {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 27px;
+  display: flex;
+  align-items: start;
+}
+
+.ant-space-item span svg {
+  color: black;
+}
+
 table {
   background-color: #e5e5e5;
 }
