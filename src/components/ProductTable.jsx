@@ -96,7 +96,7 @@ function ProductTable() {
             } else {
               url = ingles;
             }
-            return <img src={url} />;
+            return <img src={url} key={idioma} />;
           })}
         </>
       ),
