@@ -1,6 +1,6 @@
 import React from "react";
-import { Space, Table, Tag } from "antd";
-import Icon, { DownOutlined } from "@ant-design/icons";
+import { Table, Tag } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 import ingles from "./ingles.png";
 import español from "./españa.png";
 import { Link } from "react-router-dom";
@@ -113,7 +113,7 @@ function ProductTable() {
             } else {
               url = ingles;
             }
-            return <img src={url} key={idioma} />;
+            return <img src={url} key={idioma} className="m-1" />;
           })}
         </>
       ),
