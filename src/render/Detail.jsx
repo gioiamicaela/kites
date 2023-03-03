@@ -81,7 +81,7 @@ function Detail() {
                 />
               </Link>
             </div>
-            <div className="col-8 d-flex flex-column align-items-start ">
+            <div className="col-6 d-flex flex-column align-items-start ">
               <h4
                 style={{
                   fontFamily: "Poppins",
@@ -161,7 +161,7 @@ function Detail() {
                 })}
               </div>
             </div>
-            <div className="col-2">
+            <div className="col-4">
               <img
                 src={product[0].img}
                 style={{ width: "180px", height: "180px" }}

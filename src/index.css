@@ -107,24 +107,6 @@ table {
   height: 34px;
 }
 
-.formButton {
-  width: 168.21px;
-  height: 30px;
-  background: #000000;
-  border-radius: 5px;
-}
-
-.formButton span {
-  width: 137.54px;
-  height: 16px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
-  color: #ffffff;
-}
-
 .idiomaButton span {
   font-family: "Poppins";
   font-style: normal;
@@ -150,4 +132,25 @@ table {
   line-height: 24px;
   color: #000000;
   margin-right: 10px;
+}
+
+.formButton {
+  width: 168.21px;
+  height: 30px;
+  background: #000000;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+button span.anticon.anticon-plus {
+  width: 11.26px;
+  height: 11.38px;
+}
+
+button span svg {
+  color: #ffffff;
+  width: 11.26px;
+  height: 11.38px;
 }
