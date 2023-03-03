@@ -137,3 +137,7 @@ table {
 .ant-btn-dashed {
   border: transparent;
 }
+
+.tableLink {
+  color: black;
+}

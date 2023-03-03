@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/new" element={<AddProduct />} />
-        <Route path="/:id" element={<Detail />} />
+        <Route path="/:codigo" element={<Detail />} />
       </Routes>
     </div>
   );

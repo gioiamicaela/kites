@@ -3,6 +3,7 @@ import { Space, Table, Tag } from "antd";
 import Icon, { DownOutlined } from "@ant-design/icons";
 import ingles from "./ingles.png";
 import español from "./españa.png";
+import { Link } from "react-router-dom";
 
 function ProductTable() {
   const columns = [
@@ -11,7 +12,11 @@ function ProductTable() {
       dataIndex: "codigo",
       key: "codigo",
       icon: <DownOutlined />,
-      render: (text) => <a>{text}</a>,
+      render: (text, record) => (
+        <Link className="tableLink" to={`/${record.codigo}`}>
+          {text}
+        </Link>
+      ),
     },
     {
       title: "Nombre",
