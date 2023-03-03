@@ -21,6 +21,7 @@ function FormProduct() {
       initialValues={{
         remember: true,
       }}
+      id="productForm"
     >
       <Form.Item
         label="Nombre:"
@@ -62,9 +63,14 @@ function FormProduct() {
           type="dashed"
           style={{
             width: "60%",
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: "400",
+            fontSize: "14px",
+            lineHeight: "21px",
+            color: "#000000",
           }}
           icon={<PlusOutlined />}
-          className="idiomaButton"
         >
           Añadir lengua
         </Button>

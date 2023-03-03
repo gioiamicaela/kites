@@ -90,10 +90,14 @@ table {
 .formLabels {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   text-align: start;
+}
+
+#productForm div.ant-form-item.formLabels {
+  margin-bottom: 10px;
 }
 
 .css-dev-only-do-not-override-10ed4xt.ant-form-item .ant-form-item-label {
@@ -107,17 +111,22 @@ table {
   height: 34px;
 }
 
-.idiomaButton span {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  color: #000000;
+#basic_idiomas {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 5px;
+}
+
+#basic_idiomas span svg {
+  color: black;
+  width: 11.26px;
+  height: 11.38px;
 }
 
 .ant-btn-dashed {
   border: transparent;
+  box-shadow: none;
 }
 
 .tableLink {
