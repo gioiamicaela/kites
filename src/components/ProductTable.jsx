@@ -1,23 +1,32 @@
 import React from "react";
-import { Table, Tag, Avatar, Divider, Tooltip } from "antd";
-import {
-  DownOutlined,
-  AntDesignOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { Table, Tag } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 import ingles from "./ingles.png";
 import español from "./españa.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import avatar from "./avatar.png";
 import avatar6 from "./avatar600000.png";
 import avatarBD from "./avatarBD.png";
 
 function ProductTable() {
+  const navigate = useNavigate();
+  const onRow = (record, rowIndex) => {
+    return {
+      onClick: () => {
+        navigate(`/${record.codigo}`);
+      },
+      onDoubleClick: () => {
+        navigate(`/${record.codigo}`);
+      },
+    };
+  };
+
   const columns = [
     {
       title: "",
       dataIndex: "avatar",
       key: "avatar",
+      width: "40px",
       render: (text, record) => (
         <Link className="tableLink" to={`/${record.codigo}`}>
           <img src={record.img} alt="" />
@@ -81,7 +90,7 @@ function ProductTable() {
                   </>
                 )}
                 {webs.length > 2 && index === webs.length - 1 && (
-                  <h6 className="groupingNumber">+{webs.length - 2}</h6>
+                  <span className="groupingNumber">+{webs.length - 2}</span>
                 )}
               </>
             );
@@ -185,7 +194,9 @@ function ProductTable() {
       img: avatarBD,
     },
   ];
-  return <Table columns={columns} dataSource={data} />;
+  return (
+    <Table columns={columns} size="small" dataSource={data} onRow={onRow} />
+  );
 }
 
 export default ProductTable;

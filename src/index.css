@@ -111,8 +111,19 @@ td:last-child {
   table
   tbody.ant-table-tbody
   td {
-  word-wrap: break-word;
-  max-width: 150px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.ant-tag {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 12px;
 }
 
 .ant-dropdown-trigger {
@@ -169,7 +180,8 @@ td:last-child {
 .tableLink {
   color: black;
 }
-Fichas .detailsTitle {
+
+.detailsTitle {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
