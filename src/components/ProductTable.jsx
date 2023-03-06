@@ -1,6 +1,10 @@
 import React from "react";
-import { Table, Tag } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { Table, Tag, Avatar, Divider, Tooltip } from "antd";
+import {
+  DownOutlined,
+  AntDesignOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import ingles from "./ingles.png";
 import español from "./españa.png";
 import { Link } from "react-router-dom";
@@ -51,7 +55,7 @@ function ProductTable() {
       dataIndex: "webs",
       render: (_, { webs }) => (
         <>
-          {webs.map((web) => {
+          {webs.map((web, index) => {
             let color;
             if (web === "Landing comercial" || web === "Loading 2") {
               color = "#2980B9";
@@ -63,9 +67,23 @@ function ProductTable() {
               color = "#16A085";
             }
             return (
-              <Tag color={color} key={web}>
-                {web}
-              </Tag>
+              <>
+                {webs.length <= 2 && (
+                  <Tag color={color} key={web}>
+                    {web}
+                  </Tag>
+                )}
+                {webs.length > 2 && index <= 1 && (
+                  <>
+                    <Tag color={color} key={web}>
+                      {web}
+                    </Tag>
+                  </>
+                )}
+                {webs.length > 2 && index === webs.length - 1 && (
+                  <h6 className="groupingNumber">+{webs.length - 2}</h6>
+                )}
+              </>
             );
           })}
         </>

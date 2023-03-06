@@ -199,3 +199,12 @@ button span svg {
   width: 11.26px;
   height: 11.38px;
 }
+
+.groupingNumber {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #2980b9;
+}
